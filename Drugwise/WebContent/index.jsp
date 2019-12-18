@@ -70,7 +70,7 @@
 	<center>
 		<form action="./loginAction" method="post" id="register-form"
 			novalidate="novalidate">
-			<h3>User Login</h3>
+			<h3>SignIn</h3>
 			<table>
 				<tr>
 					<th>User Name:</th>

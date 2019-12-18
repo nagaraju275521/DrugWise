@@ -1,0 +1,160 @@
+body {
+	background-color: #FFFFFF;
+	margin-top: 60px;
+}
+
+.TFtable tr:nth-child(odd) {
+	background: #E6E6E6;
+}
+
+.TFtable tr:nth-child(even) {
+	background: #F9F8F8;
+}
+
+.TFtable {
+	text-align: left;
+	width: auto;
+	border-collapse: separate;
+	border-spacing: 2px;
+	border: red 0px solid;
+}
+
+.TFtable th {
+	font-size: 200%;
+	font-weight: bold;
+	text-align: center;
+	width: 200px;
+	background-color: #C6CFD2;
+	padding: 5px;
+	border: #D6D7D7 1px solid;
+	font-size: 15px;
+	color: blue;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.TFtable td {
+	text-align: left;
+	width: 200px;
+	color: black;
+	padding: 3px;
+	border: #D6D7D7 1px solid;
+	font-size: 15px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+table.TFtable tr td:FIRST-CHILD {
+	text-align: center;
+	width: 40px;
+}
+
+table.TFtable tr th:FIRST-CHILD {
+	width: 40px;
+}
+
+table.TFtable tr td:nth-child(2) {
+	width: 100px;
+}
+
+table.TFtable tr th:nth-child(2) {
+	width: 100px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+	font: 4em normal Arial, Helvetica, sans-serif;
+	padding: 20px;
+	margin: 0;
+	text-align: center;
+}
+
+h1 small {
+	font: 0.2em normal Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	line-height: 5em;
+	display: block;
+}
+
+h2 {
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	text-shadow: 0 1px 2px gray;
+}
+a{
+	color:blue;
+}
+
+.paging-nav {
+	text-align: right;
+	padding-top: 2px;
+}
+
+.paging-nav a {
+	margin: auto 1px;
+	text-decoration: none;
+	display: inline-block;
+	padding: 1px 7px;
+	background: #91b9e6;
+	color: white;
+	border-radius: 3px;
+}
+
+.paging-nav .selected-page {
+	background: #187ed5;
+	font-weight: bold;
+}
+
+.paging-nav,#tableData {
+	width: 500px;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+}
+
+.addButton {
+	position: absolute;
+	top: 10px;
+	right: 150px;
+	display: block;
+	height: 39px;
+	width: 80px;
+	background: gray;
+	border: 2px solid #A0A0A0;
+	/*Step 3: Text Styles*/
+	color: black;
+	text-align: center;
+	font: bold 14px/40px "Helvetica Neue", Arial, Helvetica, Geneva,
+		sans-serif;
+	border-radius: 3px;
+}
+
+.addButton:hover {
+	background: #fff;
+	color: #09C;
+}
+
+.deleteButton {
+	position: absolute;
+	top: 10px;
+	right: 50px;
+	display: block;
+	height: 43px;
+	width: 80px;
+	background: gray;
+	border: 2px solid #A0A0A0;
+	/*Step 3: Text Styles*/
+	color: black;
+	text-align: center;
+	font: bold 14px/40px "Helvetica Neue", Arial, Helvetica, Geneva,
+		sans-serif;
+	border-radius: 3px;
+}
+
+.deleteButton:hover {
+	background: #fff;
+	color: #09C;
+}

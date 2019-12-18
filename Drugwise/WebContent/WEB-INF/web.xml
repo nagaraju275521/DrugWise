@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Drugwise</display-name>
+
+	
+	<servlet>
+		<servlet-name>Result_location</servlet-name>
+		<servlet-class>com.drugs.location.ResultLocation</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Result_location</servlet-name>
+		<url-pattern>/resultLocation</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>Location_Action</servlet-name>
+		<servlet-class>com.drugs.location.LocationAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Location_Action</servlet-name>
+		<url-pattern>/locationAction</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>EditLocation</servlet-name>
+		<servlet-class>com.drugs.location.EditLocationList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditLocation</servlet-name>
+		<url-pattern>/editLocationResult</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Drugs_Result</servlet-name>
+		<servlet-class>com.drugs.drug.DrugsResult</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Drugs_Result</servlet-name>
+		<url-pattern>/drugsResult</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Multy_Drugs</servlet-name>
+		<servlet-class>com.drugs.drug.MultyDrugs</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Multy_Drugs</servlet-name>
+		<url-pattern>/multydrugs</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Delete_Drugs</servlet-name>
+		<servlet-class>com.drugs.drug.DeleteDrugs</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Delete_Drugs</servlet-name>
+		<url-pattern>/deleteDrugs</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Brand_Action</servlet-name>
+		<servlet-class>com.drugs.brand.BrandAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Brand_Action</servlet-name>
+		<url-pattern>/brandAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Brand_Result</servlet-name>
+		<servlet-class>com.drugs.brand.BrandResult</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Brand_Result</servlet-name>
+		<url-pattern>/brandResult</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Contact_Action</servlet-name>
+		<servlet-class>com.drug.contact.ContactAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Contact_Action</servlet-name>
+		<url-pattern>/contactAction</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+		<servlet-name>open_Contact_Action</servlet-name>
+		<servlet-class>com.drug.contact.OpenContact</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>open_Contact_Action</servlet-name>
+		<url-pattern>/openContact</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SignUp_Action</servlet-name>
+		<servlet-class>com.drugs.signup.SignupAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUp_Action</servlet-name>
+		<url-pattern>/signupAction</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+		<servlet-name>SignUp_Result</servlet-name>
+		<servlet-class>com.drugs.signup.SignupResult</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUp_Result</servlet-name>
+		<url-pattern>/signupResult</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Login_Action</servlet-name>
+		<servlet-class>com.drugs.login.LoginAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login_Action</servlet-name>
+		<url-pattern>/loginAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Xml_Action</servlet-name>
+		<servlet-class>com.drugs.xml.XmlAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Xml_Action</servlet-name>
+		<url-pattern>/exportXml</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Excel_Action</servlet-name>
+		<servlet-class>com.drugs.excel.ExcelAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Excel_Action</servlet-name>
+		<url-pattern>/excelAction</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>2</session-timeout>
+	</session-config>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

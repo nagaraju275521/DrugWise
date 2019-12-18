@@ -9,7 +9,7 @@ public class BrandDao {
 public void insertBrand(String brand_ID, String brand_Name){
 	try{
 		Class.forName("com.mysql.jdbc.Driver"); 
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","root");
 		Statement stmt = null;
 		stmt = con.createStatement();
 		String sql = "insert into brand values (?,?)";
@@ -26,7 +26,7 @@ public List listOfBrand(){
 		String sql = "SELECT * FROM brand ORDER BY Brand_ID";
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn;
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","root");
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(sql);
 		while(rs.next()){
@@ -49,7 +49,7 @@ public void deleteBrand(String[] id){
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn;
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","root");
 		Statement stmt = conn.createStatement();
 			for(String s:id)
 			{
@@ -80,7 +80,7 @@ public List Editbrand(String brand_id){
 		String sql = "SELECT * FROM brand WHERE Brand_ID ='"+brand_id+"'";
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn;
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","root");
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(sql);
 		while(rs.next()){
@@ -102,7 +102,7 @@ public List Editbrand(String brand_id){
 public void editBrand(String brand_ID, String brand_Name){
 	try{
 		Class.forName("com.mysql.jdbc.Driver"); 
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/drug","root","root");
 		String sql = "UPDATE brand SET Brand_Name='"+brand_Name+"'  WHERE Brand_ID='"+brand_ID+"' ";
 		PreparedStatement pstp = con.prepareStatement(sql);
 		pstp.executeUpdate();

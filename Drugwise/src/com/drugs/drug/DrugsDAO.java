@@ -14,7 +14,7 @@ ArrayList<Drugs> result = new ArrayList<Drugs>();
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn;
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/drug", "root", "");
+					"jdbc:mysql://localhost:3306/drug", "root", "root");
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(sql);
 		while(rs.next()){
@@ -51,7 +51,7 @@ public void insertDrugsData(String Drug_ID, String Drug_name,
 		String id  = Drug_ID;
 		Class.forName("com.mysql.jdbc.Driver"); 
 			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/drug", "root", "");
+					"jdbc:mysql://localhost:3306/drug", "root", "root");
 		String sql = "insert into drugs values (?,?,?,?,?,?,?,?,?,?,?)";
 		  PreparedStatement pst = con.prepareStatement(sql);
 		  pst.setString(1, Drug_ID);
@@ -83,7 +83,7 @@ public void deleteDrugs(String[] c){
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con = null;
 	con = DriverManager.getConnection(
-			"jdbc:mysql://localhost:3306/drug", "root", "");
+			"jdbc:mysql://localhost:3306/drug", "root", "root");
 	Statement stmt = null;
 	stmt = con.createStatement();
 		for(String s:c)
@@ -113,7 +113,7 @@ public List resultOfEditDrug(String edit_id){
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn;
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/drug", "root", "");
+					"jdbc:mysql://localhost:3306/drug", "root", "root");
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(sql1);
 		while(rs.next()){
@@ -150,7 +150,7 @@ public void editDrug(String drug_ID, String drug_name,
 	try{
 		Class.forName("com.mysql.jdbc.Driver"); 
 			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/drug", "root", "");
+					"jdbc:mysql://localhost:3306/drug", "root", "root");
 		Statement stmt = null;
 		stmt = con.createStatement();
 			String sql = "UPDATE drugs SET Drug_name='" + drug_name
@@ -184,7 +184,7 @@ public List resultOfMultyDrugs(){
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn;
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/drug", "root", "");
+					"jdbc:mysql://localhost:3306/drug", "root", "root");
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(sql);
 		while(rs.next()){
@@ -210,7 +210,7 @@ public List resultOfEditDrugMulty(){
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn;
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/drug", "root", "");
+					"jdbc:mysql://localhost:3306/drug", "root", "root");
 		Statement stmt = conn.createStatement();
 		ResultSet rss = stmt.executeQuery(sql2);
 		while(rss.next()){
@@ -236,7 +236,7 @@ public List resultOfExistDrugBrand(String edit_id){
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn;
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/drug", "root", "");
+					"jdbc:mysql://localhost:3306/drug", "root", "root");
 		Statement stmt = conn.createStatement();
 		ResultSet rst = stmt.executeQuery(sql);
 		while(rst.next()){
